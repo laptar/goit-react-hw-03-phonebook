@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 export const ContactList = ({ list, serchName, onDelete }) => {
+  console.log(list);
   return (
     <ul>
       {list.length ? (
@@ -33,7 +34,7 @@ export const ContactList = ({ list, serchName, onDelete }) => {
 };
 
 ContactList.propTypes = {
-  list: PropTypes.array,
+  list: PropTypes.arrayOf(PropTypes.object),
   serchName: PropTypes.string,
   onDelete: PropTypes.func,
 };
